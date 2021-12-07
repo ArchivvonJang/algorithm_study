@@ -54,11 +54,14 @@ public class Hash01 {
     }
     
     public static void main(String[] args) {
+    	//선수들 명단
     	String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
     	String[] completion = {"josipa", "filipa", "marina", "nikola"};
     	
     	Hash01 h01 = new Hash01();
     	
     	System.out.println(h01.solution(participant, completion));
+    	
+    	//21.12.07 : programmers 코드실행 결과 중복이름은 해결이 안됨!! 다른 방법도 찾아보기 
     }
 }
