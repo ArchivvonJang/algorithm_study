@@ -1,4 +1,4 @@
-package min;
+package yun;
 
 public class Hash01 {
 
