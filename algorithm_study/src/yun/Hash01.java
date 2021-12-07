@@ -18,7 +18,8 @@ public class Hash01 {
 		}
 		//맵에 남아있는 선수이름은 리턴한다.
 		Map.Entry<String,String> entry = map.entrySet().iterator().next();
-		answer = entry.getKey();
+//		answer = entry.getKey();
+		answer = (String) map.values().toArray()[0];
 		return answer;
 	}
 
