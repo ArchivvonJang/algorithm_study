@@ -7,19 +7,25 @@ import java.util.Map;
 public class Hash01 {
 	public String findPlayer(String[] part, String[] comp) {
 		String answer = ""; 
-		HashMap<String, String> map = new HashMap<String, String>();
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		//참가선수를 맵에 다 넣고
 		for(String player : part) {
-			map.put(player, "참가");
+//			map.put(player, "참가");
+			map.put(player, map.getOrDefault(player, 0) + 1);
 		}
 		//완주선수를 맵에서 찾아서 뺀다
 		for(String player : comp) {
-			map.remove(player);
+//			map.remove(player);
+			map.put(player, map.get(player) - 1);
 		}
-		//맵에 남아있는 선수이름은 리턴한다
-		Map.Entry<String,String> entry = map.entrySet().iterator().next();
+		//맵에 남아있는 선수이름은 리턴한다.
+//		Map.Entry<String,String> entry = map.entrySet().iterator().next();
 //		answer = entry.getKey();
-		answer = (String) map.values().toArray()[0];
+		for (String key : map.keySet()) {
+            if (map.get(key) != 0){
+                answer = key;
+            }
+        }
 		return answer;
 	}
 
