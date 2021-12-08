@@ -16,7 +16,7 @@ public class Hash01 {
 		for(String player : comp) {
 			map.remove(player);
 		}
-		//맵에 남아있는 선수이름은 리턴한다.
+		//맵에 남아있는 선수이름은 리턴한다
 		Map.Entry<String,String> entry = map.entrySet().iterator().next();
 //		answer = entry.getKey();
 		answer = (String) map.values().toArray()[0];
