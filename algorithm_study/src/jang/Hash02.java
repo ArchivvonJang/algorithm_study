@@ -20,7 +20,7 @@ public class Hash02 {
         for(int i = 0; i<phone_book.length; i++) {
         	if(!phone_book[i].equals(phone_book[i])) {
         		//글자를 하나하나 잘라서 숫자 비교를 해야할까???
-        		
+        		//map에 담아서 잘라?
         		answer = true;
         		
         	}else
