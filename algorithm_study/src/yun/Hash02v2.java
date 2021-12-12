@@ -11,12 +11,7 @@ public class Hash02v2 {
 		}
 		for (int i = 0; i < number.length; i++) {
 			for (int j = 0; j < number[i].length(); j++) {
-				System.out.println("1=>"+map.get(number[i]));
-				System.out.println(number[i].substring(0, j));
-				System.out.println("i=>"+i);
-//				if (map.containsKey(number[i].substring(0, j))) {
 				if (map.containsKey(number[i].substring(0, j))) {
-					System.out.println("??"+i);
 					answer = false;
 				}
 			}
