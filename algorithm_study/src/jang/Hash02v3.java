@@ -11,18 +11,20 @@ public class Hash02v3 {
     	// set : 중복 저장x, 하나의 null만 저장, 순서 유지x, **중복 자동 제거 
     	//LinkedHashSet: 순서 유지o, TreeSet : 자동정렬
     	
+    	boolean answer = true;
+    	
     	HashSet<String> set = new HashSet<>();
     	
-    	for(String pb : phone_book) {
-    		
-    		for(String pb2 : set) {
-    			if(pb.startsWith(pb2)|| pb2.startsWith(pb) )   				
-    				return false;
-    		}
-    		set.add(pb);
-    	}
-    	return true;
-        
+    	for (int i = 0; i < phone_book.length; i++) {
+			set.add(phone_book[i]);
+		}
+        for(String pb:phone_book) {
+        	for(int j=1; j<pb.length(); j++) {
+        		if(set.contains(pb.subSequence(0, j)))
+        			answer = false;
+        	}
+        }
+        return answer;
     }
 
     
