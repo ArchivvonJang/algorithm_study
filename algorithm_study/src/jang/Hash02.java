@@ -7,6 +7,7 @@ import java.util.*;
 public class Hash02 {      
 	
     public boolean solution(String[] phone_book) {
+
         // 각 전화번호끼리 비교해야한다.
         // 전화번호들을 하나씩 꺼낸다.
         // 전화번호들끼리 숫자가 겹치는 번호가 있는지 확인한다.
