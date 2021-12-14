@@ -20,9 +20,6 @@
 [프로그래머스 고득점 KIT](https://programmers.co.kr/learn/challenges)
 
 ### 참여자
-  <a href="">
- <img src = "https://contrib.rocks/image?repo = GitHub_username/ArchivvonJang"/>
-  </a>
 
 
 
