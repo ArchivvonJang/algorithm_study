@@ -13,7 +13,6 @@ public class 정렬_K번째수 {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer;
         List<Integer> list = new ArrayList<>();
-
         // 1.
         for (int a = 0; a<commands.length; a++) {
             // 2.
