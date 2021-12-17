@@ -17,9 +17,9 @@ public class 정렬_K번째수 {
         // 1.
         for (int a = 0; a<commands.length; a++) {
             // 2.
-            int[] first = Arrays.copyOfRange(array, commands[a][0]-1, commands[a][1]);
-            Arrays.sort(first);
-            list.add(first[commands[a][2]-1]);
+            int[] arrRange = Arrays.copyOfRange(array, commands[a][0]-1, commands[a][1]);
+            Arrays.sort(arrRange);
+            list.add(arrRange[commands[a][2]-1]);
         }
         // 3.
         answer = list.stream().mapToInt(i->i).toArray();
