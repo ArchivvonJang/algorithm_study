@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/* 
+/*
 1. commands의 1차원 배열만큼 돌면서
 2. 2차원 배열의 i, j를 받아서 자르기 및 정렬
 3. List<Integer> -> int[]
