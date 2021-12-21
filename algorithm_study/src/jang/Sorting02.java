@@ -14,8 +14,8 @@ public class Sorting02 {
 		// * compareTo 
 		// * 배열을 다루기 위해 제공된 메소드들이 Arrays에 있으며 sort함수는 Comparator 인터페이스를 받아 주어진 기준에 따른 정렬을 수행할 수 있습니다.
 		// * 배열이 primitive 타입인 경우 Dual-Pivot QuickSort, Object 타입인 경우 Tim Sort를 사용
-		//Dual-Pivot QuickSort : InsertionSort와 QuickSort를 결합한 정렬 알고리즘
-		// Tim Sort :  InsertionSort와 MergeSort를 결합한 / MergeSort에 사용되는 추가 메모리 공간, 공간을 위해 소요되는 시간을 더 효율적으로 해결한 정렬 알고리즘
+		// * Dual-Pivot QuickSort : InsertionSort와 QuickSort를 결합한 정렬 알고리즘
+		// * Tim Sort :  InsertionSort와 MergeSort를 결합한 / MergeSort에 사용되는 추가 메모리 공간, 공간을 위해 소요되는 시간을 더 효율적으로 해결한 정렬 알고리즘
 
 	    String answer = "";
 	    
@@ -36,9 +36,5 @@ public class Sorting02 {
     	int[] numbers = {3, 30, 34, 5, 9};
 
     	Sorting02 s02 = new Sorting02();
-    	
-    //https://codevang.tistory.com/294
-    //https://ivory-room.tistory.com/43	
-    	//https://immose93.tistory.com/117
     }
 }
