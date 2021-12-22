@@ -5,16 +5,12 @@ import java.util.Comparator;
 
 public class 가장큰수 {
 	public String solution(int[] numbers) {
-		String answer = "";
-		//1. 주어진 정수 조합
-        //2. 정렬로 가장 큰수를 리스트 맨 앞으로 가져오기
-		
+		String answer = "";		
 		String[] str = new String[numbers.length];
 		
 		for(int i = 0; i < numbers.length; i++) {
 			str[i] = String.valueOf(numbers[i]);
 		}
-		
 		//내림차순 정렬
 		Arrays.sort(str, new Comparator<String>() {
 			@Override
@@ -36,8 +32,8 @@ public class 가장큰수 {
 	}
 	
 	public static void main(String[] args) {
-//		int[] numbers = {3, 30, 34, 5, 9};
-		int[] numbers = {4, 24, 3, 1, 9};
+		int[] numbers = {3, 30, 34, 5, 9};
+//		int[] numbers = {3,30,34};
 		가장큰수 k = new 가장큰수();
 		System.out.println("가장큰수=>"+k.solution(numbers));
 	}
