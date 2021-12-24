@@ -1,16 +1,18 @@
+package hansol;
+
 import java.util.Arrays;
 
 public class HIndex {
-   public int solution(int[] citations) {
+    public int solution(int[] citations) {
         Arrays.sort(citations);
-        return rec_func(citations, citations.length - 1, 0);
+        return recSolution(citations, citations.length - 1, 0);
     }
 
-    private int rec_func(int[] citations, int h, int answer) {
-        if (h < 0 || citations.length - h > citations[h]) {
-            return answer;
+    private int recSolution(int[] citations, int numOfRemainCitation, int h) {
+        if (numOfRemainCitation < 0 || h >= citations[numOfRemainCitation]) {
+            return h;
         }
 
-        return rec_func(citations, h - 1, answer + 1);
+        return recSolution(citations, numOfRemainCitation - 1, h + 1);
     }
 }
