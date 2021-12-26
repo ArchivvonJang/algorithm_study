@@ -22,11 +22,17 @@ public class Sorting02v2 {
 	        	// * ? 왜 Collections는 되고 List는 안되는건지 ? List와 int 또는 obj를 sort해줘서?
 	        	
 	        	// 문자열로 변경
-	            String stra = String.valueOf(a), strb = String.valueOf(b);
-	   
-	            return 
+	            String stra = String.valueOf(a);
+	            String strb = String.valueOf(b);
+	            return -Integer.compare(Integer.parseInt(stra + strb), Integer.parseInt(strb + stra));
 	        });
 	        
+	        // String과 문자열을 더할 때 새로운 객체 생성x, 기존 데이터에 더하는 방식을 사용, 속도 빠르며 부하 적다
+	        StringBuilder sb = new StringBuilder(); //문자열을 이어준다.
+	        for(Integer i : list) {
+	            sb.append(i); //먼저 StringBuilder의 객체를 생성한 후, append()의 인자로 연결하고자 하는 문자열을 넣어서 StringBuilder의 객체를 통해 호출
+	        }
+	        answer = sb.toString(); //이렇게 더해준 문자열을 담는다. 
 
 	        // numbers의 0 이 아스키코드 0과 같으면 0을 리턴 
 	        if(answer.charAt(0) == '0') {
