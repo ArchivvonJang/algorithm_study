@@ -10,14 +10,16 @@ import java.util.Set;
 
 public class 완전탐색_소수찾기 {
     StringBuilder testSB = new StringBuilder(); // 테스트SB
+    StringBuilder sb = new StringBuilder();         // StringBuilder가 지역 내에 있을 때 n개이상 생성이 되기 때문에 지역 내에 생성하기보다 전역으로 둬서 매번 비우는게 좋음.
 
     boolean[] visited;  // 방문 체크
     char[]  charArr;    // 반복문을 돌면서 문자 수를 완성시켜나갈 배열
     Set<Integer> returnSet = new HashSet<>();   // 중복제거 리턴 셋
+
     // 소수(2 이상이면서 자기 자신 외에 나누어 떨어지지 않는 수) 인지 확인
     public boolean isPrime(int p) {
         if (p == 1 || p == 0) return false;
-        for (int i=2; i<p; i++) {   // Q. p가 2인 경우,  2<2이므로 자동 i++
+        for (int i=2; i<p; i++) {   // p가 2인 경우,  2<2이므로 자동 i++
             if (p%i == 0) return false; // p가 어떤 수로 잘 나눠떨어지면 소수 x
         }
         return true;
@@ -25,7 +27,8 @@ public class 완전탐색_소수찾기 {
 
     // char[]을 length 길이만큼 잘라서 int형으로 변환(parseInt) 후 반환
     public int charArrToInt(char[] charArr, int length) {
-        StringBuilder sb = new StringBuilder();// String에 붙여야하니
+        //StringBuilder sb = new StringBuilder();// String에 붙여야하니
+        sb.setLength(0); // 전역에 StringBuilder를 생성하고 매번 사용 시에 sb를 초기화하는 것을 추천.
         for (int i=0; i<length; i++) {
             sb.append(charArr[i]);
         }
