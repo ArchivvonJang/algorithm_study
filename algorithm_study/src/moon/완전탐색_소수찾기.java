@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class 완전탐색_소수찾기 {
     StringBuilder testSB = new StringBuilder(); // 테스트SB
-    StringBuilder sb = new StringBuilder();         // StringBuilder가 지역 내에 있을 때 n개이상 생성이 되기 때문에 지역 내에 생성하기보다 전역으로 둬서 매번 비우는게 좋음.
+    static StringBuilder sb = new StringBuilder();         // StringBuilder가 지역 내에 있을 때 n개이상 생성이 되기 때문에 지역 내에 생성하기보다 전역으로 둬서 매번 비우는게 좋음.
 
     boolean[] visited;  // 방문 체크
     char[]  charArr;    // 반복문을 돌면서 문자 수를 완성시켜나갈 배열
