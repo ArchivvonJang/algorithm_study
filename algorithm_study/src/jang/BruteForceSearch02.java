@@ -3,7 +3,7 @@ package jang;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BruteForceSearch01 {
+public class BruteForceSearch02 {
 // 완전탐색 - 소수찾기
     // 문제
     // 1. 한 자리 숫자가 적힌 종이
@@ -12,7 +12,8 @@ public class BruteForceSearch01 {
     // 풀이
     // 1. 모든 순열(Permutation) 구하기 (1~n 개의 모든 길이, 모든 조합)
     // 2. 구한 문자가 소수인지 확인하기 (소수인지는 나누기로 확인)
-    // 3. 소수라면 SET에 저장 ( SET : 중복 x, 12 = 012)
+    // 3. 소수라면 SET에 저장 ( SET : 중복 x)
+    //* 12 == 012
 
     // 반환할 변수
     int answer = 0;
@@ -23,21 +24,11 @@ public class BruteForceSearch01 {
     // 모든 순열을 담을 SET
     Set<Integer> set = new HashSet<Integer>();
 
-    // arr 배열에서 char 종이조각을 꺼내서, 길이 len 만큼 자르고, int로 변환
-    public int charToInt(char[] arr, int len){
 
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < len; i++){
-            sb.append(arr[i]);
-        }
-
-        return Integer.parseInt(sb.toString());
-    }
     // 모든 순열 구하기 - (순열을 만들 배열, len(number.length)개 중에서 r개를 꺼내는 경우)
     public void per(int depth, int len, String numbers){
-    //완전 탐색 - 깊이탐색
-    //배열의 첫 값부터 순서대로 하나씩 바꾸며 모든 값을 swap
+        //완전 탐색
+        //배열의 첫 값부터 순서대로 하나씩 바꾸며 모든 값을 swap
 
         if(depth == len){ // depth를 기준인덱스로 잡고, depth보다 작은 값들은 고정, depth보다 큰 값들로 swap 진행하기
             int num = charToInt(arr, len); // int로 변환하고
@@ -50,8 +41,8 @@ public class BruteForceSearch01 {
                     // 이미 add 된 값은 true로 변경해 중복을 방지한다
                     visited[i] = true;
 
-                    arr[depth] = numbers.charAt(i);
-                    // 다음 깊이 확인하기
+                    arr[depth] = numbers.charAt(i); //특정 인덱스 위치의 문자 반환
+                    // 다음 값값확인하기
                     per(depth+1, len, numbers);
                     visited[i] = false;
                 }// end if visit
@@ -59,6 +50,17 @@ public class BruteForceSearch01 {
         }// end if else
     }//end per
 
+    // arr 배열에서 char 종이조각을 꺼내서, 길이 len 만큼 자르고, int로 변환
+    public int charToInt(char[] arr, int len){
+
+        StringBuilder sb = new StringBuilder(); //문자열을 더해주는 역할!
+
+        for (int i = 0; i < len; i++){
+            sb.append(arr[i]);
+        }
+
+        return Integer.parseInt(sb.toString());
+    }
 
     // 소수(Prime)인지 구하기
     static boolean isPrimeNum(int num){
@@ -69,7 +71,7 @@ public class BruteForceSearch01 {
 
         // 2이상 숫자들 소수인지 확인하기
         // Math.sqrt() : 제곱근(루트)구하는 메소드 (원리 이해하기 - https://cjlee38.github.io/btb/ways_to_find_prime_number)
-       //for(int i = 2; i < n; i++){
+        //for(int i = 2; i < n; i++){
         for (int i = 2; i <= Math.sqrt(num); i++){
             if(num % i == 0)
                 return false;
@@ -77,10 +79,11 @@ public class BruteForceSearch01 {
         return true;
     }
 
-    // 반환
+
+    // 크기지정 && 꺼내기
     public int solution(String numbers) {
 
-        visited = new boolean[numbers.length()];
+        visited = new boolean[numbers.length()]; //크기는 number의 길이만큼
         arr = new char[numbers.length()];
 
         for (int i = 1; i<= numbers.length(); i++){
@@ -91,13 +94,14 @@ public class BruteForceSearch01 {
         return answer;
     }
 
+
     public static void main(String[] args) {
 
-        String numbers = "1234567809";
+        String numbers = "017";
 
-        BruteForceSearch01 bfs01 = new BruteForceSearch01();
+        BruteForceSearch02 bfs02 = new BruteForceSearch02();
 
-        System.out.println(bfs01.solution(numbers));
+        System.out.println(bfs02.solution(numbers));
 
     }
 
