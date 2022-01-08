@@ -10,14 +10,18 @@ public class DfsBfs01 {
     // 적절히 더하거나 빼는 로직을 짜야한다.
     // 로직을 컬렉션에 담고 size를 꺼내주면 끝
     // dfs - stack/ bfs-queue
-    // 풀이
+
+    // dfs로 해결, bfs도 해보기 !
 
     public int solution(int[] numbers, int target) {
         int answer = dfs(numbers, 0, 0, target);
                 // 숫자배열, depth, 숫자배열로 만든 sum, 목표 값
         return answer;
     }
+
+    //배열의 모든 요소를 더하거나 빼서 target 넘버를 만드는 방법의 수를 return하는 메소드
     private int dfs(int[] numbers, int depth, int sum, int target){
+        //numbers의 크기와 depth가 일치하는 경우 -> 모든 자리에 대한 탐색 완료
         if(depth == numbers.length){
             if(sum==target)
                 return 1;
@@ -41,7 +45,7 @@ public class DfsBfs01 {
         depth : 2 ,  sum : 0 , next depth : 3 , numbers[depth] : 1 , sum+numbers[depth] : 1 , sum-numbers[depth] : -1
          */
 
-        // 뺄셈과 덧셈을 적용하며, dfs 호출
+        // 더하거나 빼는 연산과정을 Tree로 보고 '+'연산은 왼쪽 자식노드, '-'연산은 오른쪽 자식 노드로 내려가는 과정으로 재귀호출을 통해 해결한다
         return dfs(numbers, depth+1, sum + numbers[depth], target)
                 + dfs(numbers, depth+1, sum - numbers[depth], target);
 
