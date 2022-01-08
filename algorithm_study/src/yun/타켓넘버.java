@@ -8,7 +8,7 @@ public class 타켓넘버 {
 
     public void dfs(int level, int sum, String test){
 //        System.out.println("level=>"+level);
-        System.out.println("test=>"+test);
+//        System.out.println("test=>"+test);
 //        System.out.println("+++++++++++sum=>"+sum);
         if(level == numbers.length){
             if(sum == target){
