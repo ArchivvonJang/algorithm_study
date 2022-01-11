@@ -7,9 +7,9 @@ public class 타켓넘버 {
     int answer = 0;
 
     public void dfs(int level, int sum, String test){
-//        System.out.println("level=>"+level);
-//        System.out.println("test=>"+test);
-//        System.out.println("+++++++++++sum=>"+sum);
+        System.out.println("level=>"+level);
+        System.out.println("test=>"+test);
+        System.out.println("+++++++++++sum=>"+sum);
         if(level == numbers.length){
             if(sum == target){
                 answer++;
@@ -31,8 +31,8 @@ public class 타켓넘버 {
 
     public static void main(String[] args) {
         타켓넘버 sol = new 타켓넘버();
-        int[] numbers = {1,1};
-        int target = 2;
+        int[] numbers = {1,2,3};
+        int target = 3;
         System.out.println(sol.solution(numbers, target));
     }
 }
