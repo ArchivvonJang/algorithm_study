@@ -25,7 +25,7 @@ public class 네트워크 {
 				int computer = q.poll();
 				
 				for(int j=0; j<n; j++) {
-					// 자기 자신이거나 방문한 노드면 건너뛰기
+					
 					if(j == computer || visited[j]) {
 						continue;
 					}
@@ -42,8 +42,8 @@ public class 네트워크 {
 	
 	public static void main(String[] args) {
 		네트워크 sol = new 네트워크();
-//		int[][] computers = {{1,1,0}, {1,1,1}, {0,1,1}};//1
-		int[][] computers = {{1,1,0}, {1,1,0}, {0,0,1}};//2
+		int[][] computers = {{1,1,0}, {1,1,1}, {0,1,1}};//1
+//		int[][] computers = {{1,1,0}, {1,1,0}, {0,0,1}};//2
 		int n = 3;
 		System.out.println(sol.Solution(computers, n));
 	}
