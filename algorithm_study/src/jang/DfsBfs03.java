@@ -14,12 +14,15 @@ import java.io.IOException;
 //
 public class DfsBfs03 {
 
+        int answer = 0;
+        boolean[] visited;
+        int chk = 0;
+
         public int solution(String begin, String target, String[] words) {
-            int answer = 0;
             // target이 word 안에 있을 때 (target과 word가 같은지 먼저 확인)
             if(isContain(target, words)) {
 
-                boolean[] visited = new boolean[words.length];
+                visited = new boolean[words.length];
                 dfs(begin, target, words, visited, 0);
 
             // target이 word 안에 없을 때
@@ -32,7 +35,7 @@ public class DfsBfs03 {
 
 
         // word안에 target이 있는지 확인
-        static boolean isContain(String target, String[] words) {
+        public boolean isContain(String target, String[] words) {
             for(String word : words) {
                 if(word.equals(target)) return true;
             }
@@ -40,13 +43,13 @@ public class DfsBfs03 {
         }// end isContain
 
         // DFS
-        static void dfs(String word, String target, String[] words, boolean[] visited, int cnt){
+        public void dfs(String word, String target, String[] words, boolean[] visited, int cnt){
            for (int i = 0; i < words.length; i++){
 
                if(visited[i]) continue; //이미 확인했다면 지나가기
 
-               int chk = 0;    // 같은 알파벳이 몇개인지 세기
-               for (int j = 0; i < word.length(); j++){
+                 // 같은 알파벳이 몇개인지 세기
+               for (int j = 0; j < word.length(); j++){
                    // 시작 단어의 j번째 알파벳이 i번째 단어의 j번째 알파벳과 같다면
                    if(word.charAt(j) == words[i].charAt(j) ){
                        chk++;
@@ -54,13 +57,12 @@ public class DfsBfs03 {
 
 
                if(chk == word.length() - 1){ //알파벳 하나 빼고 모두 같다면
-                    //이부분은 이해가 안간다
+
                    visited[i] = true;
-
                    dfs(words[i], target, words, visited,cnt + 1);
-
                    visited[i] = false;
                }
+
                }// end for
            } // end for
         }// end dfs
