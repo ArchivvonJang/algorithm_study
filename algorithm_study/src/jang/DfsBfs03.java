@@ -14,13 +14,14 @@ import java.io.IOException;
 //
 public class DfsBfs03 {
 
-        int answer = 0;
-        boolean[] visited;
-        int chk = 0;
+        static int answer = 0;
+        static boolean[] visited;
 
         public int solution(String begin, String target, String[] words) {
             // target이 word 안에 있을 때 (target과 word가 같은지 먼저 확인)
-            if(isContain(target, words)) {
+            visited = new boolean[words.length];
+            dfs(begin, target, words, 0);
+/*            if(isContain(target, words)) {
 
                 visited = new boolean[words.length];
                 dfs(begin, target, words, visited, 0);
@@ -28,7 +29,7 @@ public class DfsBfs03 {
             // target이 word 안에 없을 때
             }else{
                 answer = 0;
-            }
+            }*/
             return answer;
         }// end solution
 
@@ -37,18 +38,25 @@ public class DfsBfs03 {
         // word안에 target이 있는지 확인
         public boolean isContain(String target, String[] words) {
             for(String word : words) {
-                if(word.equals(target)) return true;
+                if(word.equals(target)) {
+                    return true;
+                }
             }
             return false;
         }// end isContain
 
         // DFS
-        public void dfs(String word, String target, String[] words, boolean[] visited, int cnt){
+        public static void dfs(String word, String target, String[] words, int cnt){
+            if (word.equals(target)){
+                answer = cnt;
+                return;
+            }
            for (int i = 0; i < words.length; i++){
 
                if(visited[i]) continue; //이미 확인했다면 지나가기
 
                  // 같은 알파벳이 몇개인지 세기
+               int chk=0;
                for (int j = 0; j < word.length(); j++){
                    // 시작 단어의 j번째 알파벳이 i번째 단어의 j번째 알파벳과 같다면
                    if(word.charAt(j) == words[i].charAt(j) ){
@@ -59,7 +67,7 @@ public class DfsBfs03 {
                if(chk == word.length() - 1){ //알파벳 하나 빼고 모두 같다면
 
                    visited[i] = true;
-                   dfs(words[i], target, words, visited,cnt + 1);
+                   dfs(words[i], target, words, cnt + 1);
                    visited[i] = false;
                }
 
