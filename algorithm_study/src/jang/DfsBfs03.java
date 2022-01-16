@@ -14,39 +14,20 @@ import java.io.IOException;
 //
 public class DfsBfs03 {
 
-        static int answer = 0;
-        static boolean[] visited;
+        int answer = 0;
+        boolean[] visited;
 
         public int solution(String begin, String target, String[] words) {
-            // target이 word 안에 있을 때 (target과 word가 같은지 먼저 확인)
+
             visited = new boolean[words.length];
             dfs(begin, target, words, 0);
-/*            if(isContain(target, words)) {
 
-                visited = new boolean[words.length];
-                dfs(begin, target, words, visited, 0);
-
-            // target이 word 안에 없을 때
-            }else{
-                answer = 0;
-            }*/
             return answer;
         }// end solution
 
-
-
-        // word안에 target이 있는지 확인
-        public boolean isContain(String target, String[] words) {
-            for(String word : words) {
-                if(word.equals(target)) {
-                    return true;
-                }
-            }
-            return false;
-        }// end isContain
-
         // DFS
-        public static void dfs(String word, String target, String[] words, int cnt){
+        public void dfs(String word, String target, String[] words, int cnt){
+            // word안에 target이 있는지 확인
             if (word.equals(target)){
                 answer = cnt;
                 return;
