@@ -1,6 +1,6 @@
 package jang;
 // 완전탐색 - 카펫
-public class BruteForceSearch03 {
+class fBruteForceSearch03 {
         public int[] solution(int brown, int yellow) {
 
             //{width, height}
