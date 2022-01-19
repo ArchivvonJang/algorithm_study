@@ -38,6 +38,7 @@ public class 여행경로2 {
 			}
 		}
 	}
+	
 	public void print(ArrayList<String> routes) {
 		for(int i=0; i<routes.size(); i++) {
 			System.out.println(routes.get(i));
