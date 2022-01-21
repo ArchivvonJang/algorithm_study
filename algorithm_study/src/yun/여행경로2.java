@@ -13,11 +13,11 @@ public class 여행경로2 {
 		
 		dfs("ICN", "ICN", tickets, 0);
 		
-		System.out.println("+++++++++정렬 +++++++++++");
+//		System.out.println("+++++++++정렬 +++++++++++");
 		print(routes);
-		System.out.println("++++++++++++++++++++");
+//		System.out.println("++++++++++++++++++++");
 		Collections.sort(routes);
-		System.out.println("++++++++++정렬 후 ++++++++++");
+//		System.out.println("++++++++++정렬 후 ++++++++++");
 		print(routes);
         answer = routes.get(0).split(" ");
 		
