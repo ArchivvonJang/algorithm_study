@@ -13,11 +13,11 @@ public class 여행경로2 {
 		
 		dfs("ICN", "ICN", tickets, 0);
 		
-		System.out.println("+++++++++정렬 +++++++++++");
+//		System.out.println("+++++++++정렬 +++++++++++");
 		print(routes);
-		System.out.println("++++++++++++++++++++");
+//		System.out.println("++++++++++++++++++++");
 		Collections.sort(routes);
-		System.out.println("++++++++++정렬 후 ++++++++++");
+//		System.out.println("++++++++++정렬 후 ++++++++++");
 		print(routes);
         answer = routes.get(0).split(" ");
 		
@@ -38,6 +38,7 @@ public class 여행경로2 {
 			}
 		}
 	}
+	
 	public void print(ArrayList<String> routes) {
 		for(int i=0; i<routes.size(); i++) {
 			System.out.println(routes.get(i));
