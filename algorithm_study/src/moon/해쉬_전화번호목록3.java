@@ -21,7 +21,7 @@ class 해쉬_전화번호목록3 {
         }
 
         for (int i = 0; i < phone_book.length; i++) {
-            for (int j = 1; j < phone_book[i].length(); j++) {      // 끝까지 탐색하면  자기 자신으로 포함되니까?
+            for (int j = 1; j < phone_book[i].length(); j++) {      // 끝에서 두번째까지만 탐색해서 그 값이 있으면 접두어가 있는 것으로 처리 (중복 전화번호x+ 끝까지 탐색하면  자기 자신)
                 System.out.println("phoneBook은 "+ phone_book[i]);
                 System.out.println(phone_book[i].substring(0, j));
                 if (map.containsKey(phone_book[i].substring(0, j))) {
