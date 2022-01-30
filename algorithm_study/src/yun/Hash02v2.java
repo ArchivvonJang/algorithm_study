@@ -11,8 +11,7 @@ public class Hash02v2 {
 		}
 		for (int i = 0; i < number.length; i++) {
 			for (int j = 0; j < number[i].length(); j++) {
-				String test = number[i].substring(0, j);
-				if (map.containsKey(test)) {
+				if (map.containsKey(number[i].substring(0, j))) {
 					answer = false;
 				}
 			}
