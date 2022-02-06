@@ -64,7 +64,9 @@ public class 해쉬_베스트앨범2 {
         for (int i=0; i< orderedPlays.size(); i++)
             answer[i] = orderedPlays.get(i).idx;
         return answer;
+
     }
+
 
     public static void main(String[] args) {
         String[] genres = {"classic", "pop", "classic", "classic", "pop"};

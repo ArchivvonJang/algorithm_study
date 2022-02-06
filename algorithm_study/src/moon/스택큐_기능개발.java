@@ -7,29 +7,28 @@ import java.util.List;
 // 작업을 넣은 순서로 빼는 것이니까 큐(LinkedList)
 public class 스택큐_기능개발 {
     public int[] solution(int[] progresses, int[] speeds) {
-        LinkedList<Integer> qu = new LinkedList<Integer>();
+        LinkedList<Integer> qu = new LinkedList<>();
         for (int i=0; i<progresses.length; i++)
-            qu.add((int) Math.ceil((100-progresses[i]) /Double.valueOf(speeds[i])));   // 남은 작업량
+            qu.add((int) Math.ceil((100-progresses[i]) /Double.valueOf(speeds[i])));   // 남은 작업일수
 
         List<Integer> answerList = new ArrayList<>();
-        // 오른쪽보다 작으면 작업갯수+1하고 리셋
-        // 오른쪽보다 크면, 계속 더하다가, 오른쪽보다 작으면 그때 작업 갯수를 더함.
+        // 오른쪽 작업일수가 작으면 같이 처리할 수 있으니 작업갯수+1
+        // 오른쪽 작업일수가 크면 먼저 처리할 수 있으니 add하고 max 변경&taskNum=1
         int taskNum=1;
         int max = qu.poll();
         while(!qu.isEmpty()) {
             int task = qu.poll();
-            if (max < task) {   // max보다 큰 작업량이면
+            if (max < task) {   // 오른쪽 작업일수가 크면
                 answerList.add(taskNum);    // 추가하고 리셋
                 max = task;
                 taskNum = 1;
             }
-            else if (max >= task) { // max보다 작은 작업량이면 기다려야하니 ++
+            else if (max >= task) { // 오른쪽 작업일수가 작으면 기다려야하니 ++
                 taskNum++;
             }
         }
         // list에 못 들어간 마지막 taskNum 추가
         answerList.add(taskNum);
-
         return answerList.stream().mapToInt(num->num).toArray();
     }
 
