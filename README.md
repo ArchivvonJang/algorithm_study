@@ -27,7 +27,7 @@
 |2022.01.30 (일) | 위장 | 해시 | Lv.2 | |
 |2022.02.06 (일) | 베스트앨범 | 해시 | Lv.3 || 
 |2022.02.09 (수) | 기능개발 | 스택/큐 | Lv.2 |[링크](https://programmers.co.kr/learn/courses/30/lessons/42586)| 
-
+|2022.02.13 (일) | 프린터 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42587)|
 
 
 </br>
