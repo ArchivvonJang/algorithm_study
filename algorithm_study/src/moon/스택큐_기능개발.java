@@ -1,6 +1,7 @@
 package moon;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -40,8 +41,6 @@ public class 스택큐_기능개발 {
 
         스택큐_기능개발 k = new 스택큐_기능개발();
         int[] answer = k.solution(progresses1, speeds1);
-        for (int i : answer) {
-            System.out.println(i + ", ");
-        }
+        System.out.println(Arrays.toString(answer));    // 2,1
     }
 }

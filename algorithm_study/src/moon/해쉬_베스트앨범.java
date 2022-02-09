@@ -3,67 +3,78 @@ package moon;
 // 노래 수록 기준 : plays 재생횟수 높은 장르(합을 비교) - 같은 장르의  노래 수록(재생횟수가 같으면 고유번호 낮은 노래 먼저)
 // 한 장르가 선택되면 그 장르들 노래를 먼저 수록
 // 장르별로 가장 많이 재생된 노래 2개만 수록
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
-
 /**
- * 프로그래머스 통과 실패 풀이
+ * 프로그래머스 통과 실패 풀이 => 수정 및 통과 완료
  */
 public class 해쉬_베스트앨범 {
     public int[] solution(String[] genres, int[] plays) {
-        HashMap<String, Integer> map = new HashMap<>();
-        // 1. 해쉬 추가 : <장르, play횟수 합>
-        for (int i=0; i<genres.length; i++) {
-            map.put( genres[i], map.getOrDefault(genres[i], 0)+plays[i]);
+        HashMap<String, Integer> genrePlaysMap = new HashMap<>();
+        int genresLength = genres.length;
+        // 장르별로 playsCount 합
+        for (int i = 0; i < genresLength; i++) {
+            genrePlaysMap.put(genres[i], genrePlaysMap.getOrDefault(genres[i], 0) + plays[i]);
         }
-        int[] answer = new int[map.size()*2];
-        // 2. 가장 큰 value값부터 2곡씩 index 수록
-        // 2-1. 큰 plays 기준 정렬 <장르, play 횟수합>
-        HashMap<String, Integer> sortedMap = map.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue())   // 값으로정렬
+        // playsCount 순으로 내림차순 정렬
+        HashMap<String, Integer> sortedGenrePlaysMap = genrePlaysMap.entrySet().stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))   // 값으로 내림차순정렬
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
+        // 위의 로직으로 3개 빼고 테스트 실패
 
+        List<String> genresArr = new ArrayList<>(genrePlaysMap.keySet());
+        Collections.sort(genresArr, (p1, p2) -> genrePlaysMap.get(p2).compareTo(genrePlaysMap.get(p1)));    // 내림차순
+
+        System.out.println(sortedGenrePlaysMap.entrySet());
+        // 장르별로 상위 2곡의 index를 추출
         int max;
-        int secondMaxIdx = 0;
-        int maxIdx = 0;
-        int answerIdx = -1;
-        // 3. 정렬된 genre map 반복 돌면서 장르 내 노래들 비교. 같으면 i가 더 적은 노래를 배열에 추가
-        for(String genre : sortedMap.keySet()) {
-            max = Integer.MIN_VALUE;
-            // 3-1. 장르 비교(같으면)
-            for (int i=0; i<genres.length; i++) {
-                if (genre.equals(genres[i]))
-                    // 3-2. plays 크기 비교해서 2번째까지 수록
-                    if (max < plays[i]) {
-                        if (max != Integer.MIN_VALUE) {
-                            secondMaxIdx = maxIdx;
-                        }
+        int firstIdx;
+        int secondIdx;
+        List<Integer> answer = new ArrayList<>();
+        for (String genre : sortedGenrePlaysMap.keySet()) {
+            max = -1;
+            firstIdx = -1;
+            secondIdx = -1;
+
+            for (int i = 0; i < genresLength; i++) {
+                // 1번째 곡
+                if (genre.equals(genres[i])) {
+                    if (plays[i] > max) {
                         max = plays[i];
-                        maxIdx = i;
+                        firstIdx = i;
                     }
+                }
             }
-            answer[++answerIdx] = maxIdx;
-            answer[++answerIdx] = secondMaxIdx;
+            if (firstIdx != -1)
+                answer.add(firstIdx);
+
+            // 2번째 곡
+            max = -1;
+            for (int i = 0; i < genresLength; i++) {
+                if (genre.equals(genres[i])) {
+                    if (plays[i] > max && i != firstIdx) {
+                        max = plays[i];
+                        secondIdx = i;
+                    }
+                }
+            }
+            if (secondIdx != -1)    // secondIdx는 없을 수 있음.
+                answer.add(secondIdx);
         }
-        return answer;
+        return answer.stream().mapToInt(Integer::intValue).toArray();   // List<Integer> -> int 값 -> array
     }
 
     public static void main(String[] args) {
-//        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
-//        int[] plays = {500, 600, 150, 800, 2500};
-//
+        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
+        int[] plays = {500, 600, 150, 800, 2500};
+
         해쉬_베스트앨범 k = new 해쉬_베스트앨범();
-//        int[] answer = k.solution(genres, plays);
-//        for (int i :
-//                answer) {
-//            System.out.print(i + " ");        // 4 1 3 0
-//        }
+        int[] answer = k.solution(genres, plays);
+        System.out.println(Arrays.toString(answer));// 4,1,3,0
         int[] result1 = k.solution(
                 new String[]{"A", "A", "B", "A", "B", "B", "A", "A", "A", "A"},
                 new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
 
-        System.out.println(Arrays.toString(result1));
+        System.out.println(Arrays.toString(result1));   // 0,1,2,4
     }
 }
