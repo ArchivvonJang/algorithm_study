@@ -7,10 +7,11 @@ import java.util.List;
 
 // 작업을 넣은 순서로 빼는 것이니까 큐(LinkedList)
 public class 스택큐_기능개발 {
+    public static final double FINAL_POINT = 100D;
     public int[] solution(int[] progresses, int[] speeds) {
         LinkedList<Integer> qu = new LinkedList<>();
         for (int i=0; i<progresses.length; i++)
-            qu.add((int) Math.ceil((100-progresses[i]) /Double.valueOf(speeds[i])));   // 남은 작업일수
+            qu.add((int) Math.ceil((FINAL_POINT-progresses[i]) /speeds[i]));   // 남은 작업일수
 
         List<Integer> answerList = new ArrayList<>();
         // 오른쪽 작업일수가 작으면 같이 처리할 수 있으니 작업갯수+1
@@ -24,13 +25,13 @@ public class 스택큐_기능개발 {
                 max = task;
                 taskNum = 1;
             }
-            else if (max >= task) { // 오른쪽 작업일수가 작으면 기다려야하니 ++
+            else if (max >= task) { // 오른쪽 작업일수가 작거나 같으면 기다려야하니 ++
                 taskNum++;
             }
         }
         // list에 못 들어간 마지막 taskNum 추가
         answerList.add(taskNum);
-        return answerList.stream().mapToInt(num->num).toArray();
+        return answerList.stream().mapToInt(day -> day).toArray();
     }
 
     public static void main(String[] args) {

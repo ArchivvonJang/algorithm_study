@@ -10,7 +10,7 @@ public class 해쉬_베스트앨범2 {
         // 1. 해쉬 추가 : <장르, play횟수 합>
         /* getOrDefault 대신 merge... */
         for (int i = 0; i < genres.length; i++) {
-//            genresMap.merge(genres[i], 0, (k, v) -> genresMap.get(genres[i]) + plays[i]);
+//            genresMap.merge(genres[i], plays[i], (k, v) -> genresMap.get(genres[i]) + plays[i]);
             genresMap.put(genres[i], genresMap.getOrDefault(genres[i], 0) + plays[i]);
         }
 
