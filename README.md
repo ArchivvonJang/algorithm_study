@@ -28,6 +28,7 @@
 |2022.02.06 (일) | 베스트앨범 | 해시 | Lv.3 || 
 |2022.02.09 (수) | 기능개발 | 스택/큐 | Lv.2 |[링크](https://programmers.co.kr/learn/courses/30/lessons/42586)| 
 |2022.02.13 (일) | 프린터 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42587)|
+|2022.02.16 (수) | 다리를 지나는 트럭 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42583)|
 
 
 </br>
