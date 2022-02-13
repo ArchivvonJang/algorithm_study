@@ -25,8 +25,7 @@ public class StackQueue01progresses {
         int completed = que.poll(); // 현재 기능이 완료되는 일자를 꺼내온다.
 
         while(!que.isEmpty()){
-
-            int next = que.poll();// 다음 기능이 완료되는 일자
+           int next = que.poll();// 다음 기능이 완료되는 일자
 
            if(completed < next){ // 첫번째 기능보다 뒤의 기능이 늦게 완료되는 경우
               result.add(cnt);
