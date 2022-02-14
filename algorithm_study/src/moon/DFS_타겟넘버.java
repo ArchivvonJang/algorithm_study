@@ -1,6 +1,6 @@
 package moon;
 // 주어지는 숫자(0,양수)를 +,-해서 target이 되는 경우의 수
-class DFS_타켓넘버 {
+class DFS_타겟넘버 {
     static int answer;
 
     // 3. dfs(numbers, target, idx:몇 번째 인덱스인지, sum: idx까지 누적된 값)

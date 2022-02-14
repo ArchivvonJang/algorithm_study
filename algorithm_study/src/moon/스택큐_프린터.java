@@ -2,7 +2,6 @@ package moon;
 import java.util.LinkedList;
 
 // 선입선출 => Queue
-
 /**
  * 1149 (+5)
  */
@@ -36,6 +35,7 @@ public class 스택큐_프린터 {
             for (PaperInfo p : qu)
                 if (paper.priority < p.priority) {  // ★
                     existBigger = true;
+                    break;  // +
                 }
             if (existBigger)
                 qu.add(paper);
