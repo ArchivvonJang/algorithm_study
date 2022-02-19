@@ -11,7 +11,6 @@ public class 스택큐_다리를지나는트럭 {
 
     public int solution(int bridge_length, int weight, int[] truck_weights) {
 //        Integer[] truckWeightsInteger = Arrays.stream(truck_weights).boxed().toArray(Integer[]::new);        // int -> Integer로 한번에 변환 : 6.5배...
-
         for (int truck : truck_weights) {
             while (true) {
                 // 다리에 트럭 이 없는 경우
@@ -20,9 +19,8 @@ public class 스택큐_다리를지나는트럭 {
                     break;
                 }
                 // 다리에 트럭이 다 찬 경우 빼주고~
-                else if (bridgeQu.size() == bridge_length) {
+                else if (bridgeQu.size() == bridge_length)
                     bridgeWeight -= bridgeQu.poll();    // 트럭 빼면서 무게도 빼기
-                }
                 // 다리가 차지 않은 경우
                 else {
                     // 다음 트럭이 올 수 있는 무게인지 확인
@@ -31,9 +29,8 @@ public class 스택큐_다리를지나는트럭 {
                         break;
                     }
                     //  올수 없는 무게면
-                    else {
+                    else
                         moveTruck();
-                    }
                 }
             }
         }
