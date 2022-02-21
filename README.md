@@ -30,6 +30,7 @@
 |2022.02.13 (일) | 프린터 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42587)|
 |2022.02.16 (수) | 다리를 지나는 트럭 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42583)|
 |2022.02.20 (일) | 주식가격 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42584)|
+|2022.02.23 (수) | 더 맵게 |힙 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42626)|
 
 </br>
 </br>
