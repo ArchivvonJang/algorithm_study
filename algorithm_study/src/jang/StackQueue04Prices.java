@@ -1,8 +1,6 @@
 package jang;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 // 스택/큐 - 주식 가격
