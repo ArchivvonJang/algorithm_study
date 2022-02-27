@@ -17,10 +17,10 @@ public class Heap02DiskController {
 
 
         // jobs를 [0][]자리를 오름차순으로 정렬한다. -> 작업의 요청되는 시점(요청시간)이 빠른 순으로 정렬
-        Arrays.sort(jobs, (a, b) -> a[0] - b[0]);
+        Arrays.sort(jobs, (job1, job2) -> job1[0] - job2[0]);
 
         //우선순위 큐에 int 배열을 받은 후, [][1] 자리를 오름차순으로 정렬한다. -> 작업 소요시간이 짧은은순으로 정렬
-        PriorityQueue<int[]> que = new PriorityQueue<>((a, b) -> a[1]-b[1]);
+        PriorityQueue<int[]> que = new PriorityQueue<>((job1, job2) -> job1[1] - job2[1]);
 
         //요청이 모두 수행될 때까지 반복
         while(idx < jobs.length || !que.isEmpty()){
@@ -41,7 +41,7 @@ public class Heap02DiskController {
                 int[] job = que.poll();
                 //작업을 하나 마친 후 종료시간 변경
                 endTime += job[1];
-                // 요청시간부터 종료시간까지 -> 종료시간 - 작업시작시간
+                // 요청시간부터 종료시간까지 , 총 작업시간 = 작업에 걸린 시간 + (종료시간 - 요청시간)
                 workTime += endTime - job[0];
             }
 
