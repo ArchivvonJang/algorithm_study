@@ -32,6 +32,7 @@
 |2022.02.20 (일) | 주식가격 | 스택/큐 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42584)|
 |2022.02.23 (수) | 더 맵게 |힙 | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42626)|
 |2022.02.27 (일) | 디스크 컨트롤러 |힙 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42627)|
+|2022.03.02 (수) | 이중우선순위큐 |힙 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42628)|
 
 </br>
 </br>
