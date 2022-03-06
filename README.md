@@ -34,7 +34,7 @@
 |2022.02.27 (일) | 디스크 컨트롤러 |힙 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42627)|
 |2022.03.02 (수) | 이중우선순위큐 |힙 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42628)|
 |2022.03.06 (일) | N으로 표현 |동적계획법 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42895)|
-
+|2022.03.09 (일) | 정수삼각형 | 동적계획법 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/43105)|
 </br>
 </br>
 
