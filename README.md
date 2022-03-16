@@ -36,6 +36,7 @@
 |2022.03.06 (일) | N으로 표현 |동적계획법 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42895)|
 |2022.03.13 (일) | 정수삼각형 | 동적계획법 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/43105)|
 |2022.03.16 (수) | 등굣길 | 동적계획법 | Lv.3 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42898)|
+|2022.03.20 (일) | 도둑질 | 동적계획법 | Lv.4 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42897)|
 </br>
 </br>
 
