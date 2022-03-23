@@ -8,7 +8,7 @@ public class 도둑질 {
         int[] dp2 = new int[money.length];//첫번째 집 x, 마지막 집 o
         
         dp1[0] = money[0];
-        dp1[1] = 0;
+        dp1[1] = money[0];
         
         dp2[0] = 0;
         dp2[1] = money[1];
