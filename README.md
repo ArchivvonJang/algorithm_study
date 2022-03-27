@@ -56,6 +56,7 @@
 | 2022.03.20 (일) | 도둑질        | 동적계획법 | Lv.4 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42897)|
 | 2022.03.23 (수) | 체육복        | 탐욕법  | Lv.1 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42862)|
 | 2022.03.27 (일) | 조이스틱       | 탐욕법  | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42860)|
+| 2022.03.30 (수) | 큰 수 만들기 |탐욕법| Lv.2| [링크](https://programmers.co.kr/learn/courses/30/lessons/42883)|
 </br>
 </br>
 
