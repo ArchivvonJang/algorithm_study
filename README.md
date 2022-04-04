@@ -17,7 +17,7 @@
 | [스택/큐 (Stack/Queue)](https://programmers.co.kr/learn/courses/30/parts/12081)                                             |  보통  |  완료  | 2022.02.07 ~ 2022.02.20 |
 | [힙 (Heap)](https://programmers.co.kr/learn/courses/30/parts/12117) |  보통  |  완료  | 2022.02.21 ~ 2022.03.02 |
 | [동적계획법 (Dynamic Programming)](https://programmers.co.kr/learn/courses/30/parts/12263)                                    |  낮음  |  완료  | 2022.03.03 ~ 2022.03.20 |
-| [탐욕법 (Greedy)](https://programmers.co.kr/learn/courses/30/parts/12244)                                                   |  낮음  |  진행중   | 2022.03.21 ~            |
+| [탐욕법 (Greedy)](https://programmers.co.kr/learn/courses/30/parts/12244)                                                   |  낮음  |  진행중   | 2022.03.21 ~  2022.04.10          |
 | [이분탐색](https://programmers.co.kr/learn/courses/30/parts/12486)                                                           |  낮음  |  -   |                         |
 | [그래프](https://programmers.co.kr/learn/courses/30/parts/14393)                                                            |  낮음  |  -   |                         |
 
@@ -58,6 +58,9 @@
 | 2022.03.27 (일) | 조이스틱       | 탐욕법  | Lv.2 | [링크](https://programmers.co.kr/learn/courses/30/lessons/42860)|
 | 2022.03.30 (수) | 큰 수 만들기 |탐욕법| Lv.2| [링크](https://programmers.co.kr/learn/courses/30/lessons/42883)|
 |2022.04.03 (일) |구명보트|탐욕법|Lv.2|[링크](https://programmers.co.kr/learn/courses/30/lessons/42885)|
+|2022.04.06 (수) |섬 연결하기|탐욕법|Lv.3|[링크](https://programmers.co.kr/learn/courses/30/lessons/42861)|
+
+
 </br>
 </br>
 
