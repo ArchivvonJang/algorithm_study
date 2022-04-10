@@ -9,6 +9,7 @@ public class Greedy_구명보트 {
         // 1. 오름차순 정렬을 통해 적은 몸무게값들부터 계산
         Arrays.sort(people);
         int min = 0;
+        // 2. min은 앞에서 ++, max는 뒤에서--하며, 두명 혹은 한명이 보트에 탄다.
         for (int max = people.length-1; min<=max; max--) {  // 한 index로 모였다는 것은 하나라도 통과되지 않은 것. min+max가 limit 넘든 안넘든 answer++하니까 상관x
             if (people[max] + people[min] <= limit) min++;  // 두명이 같이 타면 min은 뒤로 한칸 이동해서 비교해야함
             answer++;   // 혼자타든 둘이 타든 보트+=1
