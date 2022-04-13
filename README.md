@@ -59,6 +59,7 @@
 | 2022.03.30 (수) | 큰 수 만들기 |탐욕법| Lv.2| [링크](https://programmers.co.kr/learn/courses/30/lessons/42883)|
 | 2022.04.06 (수) |구명보트|탐욕법|Lv.2|[링크](https://programmers.co.kr/learn/courses/30/lessons/42885)|
 | 2022.04.10 (일) |섬 연결하기|탐욕법|Lv.3|[링크](https://programmers.co.kr/learn/courses/30/lessons/42861)|
+| 2022.04.13(수)|단속카메라|탐욕법|Lv.3|[링크](https://programmers.co.kr/learn/courses/30/lessons/42884)|
 
 
 </br>
