@@ -18,11 +18,12 @@
 | [힙 (Heap)](https://programmers.co.kr/learn/courses/30/parts/12117) |  보통  |  완료  | 2022.02.21 ~ 2022.03.02  |
 | [동적계획법 (Dynamic Programming)](https://programmers.co.kr/learn/courses/30/parts/12263)                                    |  낮음  |  완료  | 2022.03.03 ~ 2022.03.20  |
 | [탐욕법 (Greedy)](https://programmers.co.kr/learn/courses/30/parts/12244)                                                   |  낮음  |  완료  | 2022.03.21 ~  2022.04.13 |
-| [이분탐색](https://programmers.co.kr/learn/courses/30/parts/12486)                                                           |  낮음  | 진행중  | 2022.04.14 ~ 2022.04.20  |
-| [그래프](https://programmers.co.kr/learn/courses/30/parts/14393)                                                            |  낮음  |  -   |                          |
+| [이분탐색](https://programmers.co.kr/learn/courses/30/parts/12486)                                                           |  낮음  | 완료  | 2022.04.14 ~ 2022.04.20  |
+| [그래프](https://programmers.co.kr/learn/courses/30/parts/14393)                                                            |  낮음  |  진행중  |  2022.04.21 ~ 2022.05.01                        |
+
+</br>
 
 ## 일정 및 문제
-
 
 
 | 날짜             | 문제         | 분류        | 단계   | 문제 |
@@ -62,7 +63,9 @@
 | 2022.04.13 (수) | 단속카메라      | 탐욕법       | Lv.3 |[링크](https://programmers.co.kr/learn/courses/30/lessons/42884)|
 | 2022.04.17 (일) | 입국심사       | 이분탐색      | Lv.3 |[링크](https://programmers.co.kr/learn/courses/30/lessons/43238)|
 | 2022.04.20 (수) | 징검다리       | 이분탐색      | Lv.4 |[링크](https://programmers.co.kr/learn/courses/30/lessons/43236)|
-
+| 2022.04.24 (일) | 가장 먼 노드       | 그래프      | Lv.3 |[링크](https://programmers.co.kr/learn/courses/30/lessons/49189)|
+| 2022.04.27 (수) | 순위       | 그래프    | Lv.3 |[링크](https://programmers.co.kr/learn/courses/30/lessons/49191)|
+| 2022.05.01 (일) | 방의 개수       | 그래프    | Lv.5 |[링크](https://programmers.co.kr/learn/courses/30/lessons/49190)|
 
 </br>
 </br>
