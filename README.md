@@ -19,7 +19,7 @@
 | [동적계획법 (Dynamic Programming)](https://programmers.co.kr/learn/courses/30/parts/12263)                                    |  낮음  |  완료  | 2022.03.03 ~ 2022.03.20  |
 | [탐욕법 (Greedy)](https://programmers.co.kr/learn/courses/30/parts/12244)                                                   |  낮음  |  완료  | 2022.03.21 ~  2022.04.13 |
 | [이분탐색](https://programmers.co.kr/learn/courses/30/parts/12486)                                                           |  낮음  | 완료  | 2022.04.14 ~ 2022.04.20  |
-| [그래프](https://programmers.co.kr/learn/courses/30/parts/14393)                                                            |  낮음  |    |  2022.04.21 ~ 2022.05.01                        |
+| [그래프](https://programmers.co.kr/learn/courses/30/parts/14393)                                                            |  낮음  | 완료  |  2022.04.21 ~ 2022.05.01                        |
 
 </br>
 
