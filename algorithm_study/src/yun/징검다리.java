@@ -18,19 +18,19 @@ public class 징검다리 {
 			mid = (left + right) / 2;
 			
 			for(int currentRock : rocks) {
-				if(currentRock - prevRock < mid) {
+				if(currentRock - prevRock < mid) {//mid보다 작으면 제거 왜냐면 mid는 최소거리 
 					remove++;
 				}else {
-					prevRock = currentRock;
+					prevRock = currentRock; //
 				}
 			}
 			
 			if(distance - prevRock < mid) remove++;
 			
-			if(remove <= n) {
+			if(remove <= n) {//제거하는 바위의 갯수가 주어진 n보다 작으면 거리를 늘린다.
 				answer = mid > answer ? mid : answer;
 				left = mid + 1;
-			} else {
+			} else {//n보다 크다면 거리를 줄인다.
 				right = mid -1;
 			}
 		}
